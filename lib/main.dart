@@ -10,9 +10,27 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    /// Variavel que vai definir o tema de cor
+    final ThemeData tema = ThemeData();
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(),
+      /// Definindo as cores primarias e secundarias.
+      theme: tema.copyWith(
+        colorScheme: tema.colorScheme.copyWith(
+          primary: Colors.pink,
+          secondary: Colors.amber,
+        ),
+        textTheme: tema.textTheme.copyWith(
+          titleMedium: TextStyle(
+            color: Colors.black,
+            fontSize: 20 * MediaQuery.of(context).textScaleFactor,
+            fontFamily: 'RobotoCondensed',
+          ),
+          bodyMedium: TextStyle(
+            fontSize: 16 * MediaQuery.of(context).textScaleFactor,
+            fontFamily: 'Raleway',
+          ),
+        ),
+      ),
       home: const CategoriesScreen(),
     );
   }

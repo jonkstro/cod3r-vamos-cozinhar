@@ -53,4 +53,14 @@ List<Category> DUMMY_CATEGORIES = [
     title: 'Verão',
     color: Colors.teal,
   ),
+  Category(
+    id: 'c11',
+    title: 'Nordestina',
+    color: Colors.brown,
+  ),
+  Category(
+    id: 'c12',
+    title: 'Portuguesa',
+    color: Colors.blueGrey,
+  ),
 ];
