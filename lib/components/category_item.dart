@@ -15,7 +15,7 @@ class CategoryItem extends StatelessWidget {
       /// Ex.: Platform.isIOS ? CupertinoPageRoute(...) : MaterialPageRoute(...)
       MaterialPageRoute(
         builder: (_) {
-          return const CategoriesMealsScreen();
+          return CategoriesMealsScreen(category: category);
         },
       ),
     );
