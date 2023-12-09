@@ -11,6 +11,7 @@ class CategoriesScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Vamos Cozinhar?'),
+        centerTitle: true,
       ),
       body: GridView(
         padding: const EdgeInsets.all(15),
@@ -30,7 +31,10 @@ class CategoriesScreen extends StatelessWidget {
         /// Aqui vamos percorrer cada categoria mockada e converter em
         /// um widget CategoryItem
         children: DUMMY_CATEGORIES.map((categoria) {
-          return CategoryItem(category: categoria);
+          return CategoryItem(
+            category: categoria,
+            key: Key(categoria.id),
+          );
         }).toList(),
       ),
     );

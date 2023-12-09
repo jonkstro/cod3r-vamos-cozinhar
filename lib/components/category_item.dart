@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:vamos_cozinhar/screens/categories_meals_screen.dart';
 import '../models/category.dart';
+import '../utils/app_routes.dart';
 
 class CategoryItem extends StatelessWidget {
   final Category category;
@@ -9,15 +9,27 @@ class CategoryItem extends StatelessWidget {
 
   /// Esse método vai ser responsável por exibir na tela a tela da categoria clicada
   void _selectCategory(BuildContext context) {
-    Navigator.of(context).push(
-      /// Vou retornar um MATERIAL PAGE, mas pode fazer CUPPERTINO page pra IOS usando
-      /// Platform.isIOS da biblioteca dart:io
-      /// Ex.: Platform.isIOS ? CupertinoPageRoute(...) : MaterialPageRoute(...)
-      MaterialPageRoute(
-        builder: (_) {
-          return CategoriesMealsScreen(category: category);
-        },
-      ),
+    /// Aqui era usado antes de passar a categoria por argumento no Push, quando era
+    /// passada pelo construtor de CategoriesMealScreen
+    ///
+    // Navigator.of(context).push(
+    //   /// Vou retornar um MATERIAL PAGE, mas pode fazer CUPPERTINO page pra IOS usando
+    //   /// Platform.isIOS da biblioteca dart:io
+    //   /// Ex.: Platform.isIOS ? CupertinoPageRoute(...) : MaterialPageRoute(...)
+    //   MaterialPageRoute(
+    //     builder: (_) {
+    //       return CategoriesMealsScreen(category: category);
+    //     },
+    //   ),
+    // );
+
+    /// Aqui é navegação passando a categoria por argumento no push e usando uma
+    /// rota nomeada [por isso pushNamed]
+    Navigator.of(context).pushNamed(
+      AppRoutes.CATEGORIES_MEALS,
+
+      /// Vamos passar no argumento a categoria, pra não precisar passar no construtor
+      arguments: category,
     );
   }
 
