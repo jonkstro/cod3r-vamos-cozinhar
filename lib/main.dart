@@ -26,6 +26,7 @@ class MyApp extends StatelessWidget {
             fontFamily: 'RobotoCondensed',
           ),
           bodyMedium: TextStyle(
+            color: Colors.black,
             fontSize: 16 * MediaQuery.of(context).textScaleFactor,
             fontFamily: 'Raleway',
           ),

@@ -15,6 +15,8 @@ class CategoriesScreen extends StatelessWidget {
       body: GridView(
         padding: const EdgeInsets.all(15),
         gridDelegate: const SliverGridDelegateWithMaxCrossAxisExtent(
+          /// Largura máxima do elemento (Quadradinho)
+          /// Em um celular vai ter 2, mas se virar vai ter mais quadrados
           maxCrossAxisExtent: 200,
 
           /// Proporção largura por altura (1:1, 2:1, etc...)
