@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:vamos_cozinhar/screens/categories_meals_screen.dart';
 import 'package:vamos_cozinhar/screens/categories_screen.dart';
 import 'package:vamos_cozinhar/screens/meal_detail_screen.dart';
+import 'package:vamos_cozinhar/screens/tabs_screen.dart';
 import 'package:vamos_cozinhar/screens/unknown_screen.dart';
 import 'package:vamos_cozinhar/utils/app_routes.dart';
 
@@ -36,13 +37,16 @@ class MyApp extends StatelessWidget {
           ),
         ),
       ),
-      home: const CategoriesScreen(),
+
+      /// A home é a pagina que vai ter as tabs e carregar as outras páginas
+      home: const TabScreen(),
 
       /// Aqui estaremos centralizando as rotas do projeto, para fins de organização
       /// parecido com o que temos em WEB ('/' quer dizer o Home).
-      initialRoute: AppRoutes.HOME,
+      // initialRoute: AppRoutes.TAB_SCEEN,
       routes: {
         // Não precisa adicionar o HOME aqui, senão dá erro de redundancia
+        // AppRoutes.TAB_SCEEN: (context) => const TabScreen(),
         AppRoutes.CATEGORIES_MEALS: (context) => const CategoriesMealsScreen(),
         AppRoutes.MEAL_DETAIL: (context) => const MealDetailScreen(),
       },

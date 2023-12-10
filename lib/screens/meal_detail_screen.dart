@@ -10,7 +10,7 @@ class MealDetailScreen extends StatelessWidget {
       margin: const EdgeInsets.symmetric(vertical: 10),
       decoration: null,
       child: Text(
-        "Ingredientes",
+        title,
         style: Theme.of(context).textTheme.titleMedium,
       ),
     );
