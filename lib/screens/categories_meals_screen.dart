@@ -23,12 +23,19 @@ class CategoriesMealsScreen extends StatelessWidget {
         title: Text(category.title),
         centerTitle: true,
       ),
-      body: ListView.builder(
-        itemCount: categoryMeals.length,
-        itemBuilder: (ctx, index) {
-          return MealItem(meal: categoryMeals[index]);
-        },
-      ),
+      body: categoryMeals.isNotEmpty
+          ? ListView.builder(
+              itemCount: categoryMeals.length,
+              itemBuilder: (ctx, index) {
+                return MealItem(meal: categoryMeals[index]);
+              },
+            )
+          : Center(
+              child: Text(
+                'Nenhuma refeição cadastrada para essa categoria',
+                style: Theme.of(context).textTheme.titleMedium,
+              ),
+            ),
     );
   }
 }
