@@ -390,4 +390,156 @@ List<Meal> DUMMY_MEALS = [
     isVegetarian: true,
     isLactoseFree: true,
   ),
+  Meal(
+    id: 'm11',
+    categories: ['c11'],
+    title: 'Baião de Dois',
+    cost: Cost.Cheap,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-baiao-de-dois-3.jpg?quality=85',
+    duration: 45,
+    ingredients: [
+      '1 cup of rice',
+      '1/2 cup of black-eyed peas',
+      '200g of diced sausage',
+      '200g of diced bacon',
+      '1 chopped onion',
+      '2 cloves of garlic, minced',
+      '2 tablespoons of vegetable oil',
+      'Salt and pepper to taste',
+      'Cheese for topping (optional)'
+    ],
+    steps: [
+      'Cook the rice and black-eyed peas separately according to package instructions.',
+      'In a large pan, heat vegetable oil over medium heat.',
+      'Sauté the chopped onion and minced garlic until golden brown.',
+      'Add diced sausage and bacon to the pan, cooking until browned.',
+      'Mix in the cooked rice and black-eyed peas, stirring well.',
+      'Season with salt and pepper to taste.',
+      'Optionally, sprinkle cheese on top and let it melt.',
+      'Serve hot and enjoy your delicious Baião de Dois!'
+    ],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: false,
+  ),
+  Meal(
+    id: 'm12',
+    categories: ['c11'],
+    title: 'Acarajé Baiano',
+    cost: Cost.Fair,
+    complexity: Complexity.Dificult,
+    imageUrl:
+        'https://blog.123milhas.com/wp-content/uploads/2022/08/sao-paulo-sp-onde-comer-um-bom-acaraje-na-terra-da-garoa-conexao123.jpg',
+    duration: 60,
+    ingredients: [
+      '1 cup of black-eyed peas (soaked overnight)',
+      '1 onion, finely chopped',
+      '2 cloves of garlic, minced',
+      '1 teaspoon of ground ginger',
+      'Salt to taste',
+      'Vegetable oil for frying',
+      'Dried shrimp, vatapá, caruru, and hot sauce for filling'
+    ],
+    steps: [
+      'Blend soaked black-eyed peas, onion, garlic, ginger, and salt until smooth.',
+      'Heat oil in a pan for frying.',
+      'Drop spoonfuls of the batter into the hot oil, frying until golden brown.',
+      'Slice the acarajé and fill it with dried shrimp, vatapá, caruru, and hot sauce.',
+      'Serve and enjoy this traditional Bahian street food!'
+    ],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: true,
+  ),
+  Meal(
+    id: 'm13',
+    categories: ['c11'],
+    title: 'Bobó de Camarão',
+    cost: Cost.Expensive,
+    complexity: Complexity.Dificult,
+    imageUrl:
+        'https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj2CGm30Ot8NI1Hzc5BDKPSj-UQuKjtBhPui6kMEJacYdv7sEGETABvoxsuPm0x3QiWDu4efZOGxIgKdxmb65-GuQRhv1XLn4ibGpwKQkPJcFf4PCqvy8Vv5rSAlr_KWrcvptAtNS6r13yokqBmEIUZpZsmsXal0D9QtVI4Z9keYkXMROMo_ZN9ngep/w640-h480/bobo-de-camar%C3%A3o-3.jpg',
+    duration: 75,
+    ingredients: [
+      '500g of shrimp, peeled and deveined',
+      '2 cups of cassava (manioc) mashed',
+      '1 can of coconut milk',
+      '1 onion, chopped',
+      '2 cloves of garlic, minced',
+      '2 tomatoes, diced',
+      '1 red bell pepper, chopped',
+      '1/2 cup of dendê oil',
+      'Fresh cilantro for garnish',
+      'Salt and pepper to taste'
+    ],
+    steps: [
+      'In a large pot, cook mashed cassava in coconut milk until creamy.',
+      'In a separate pan, sauté onions, garlic, tomatoes, and bell pepper in dendê oil.',
+      'Add shrimp to the pan, cooking until pink and opaque.',
+      'Combine the shrimp mixture with the cassava mash, stirring well.',
+      'Season with salt and pepper, garnish with cilantro, and serve hot.'
+    ],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: false,
+    isLactoseFree: true,
+  ),
+  Meal(
+    id: 'm14',
+    categories: ['c11'],
+    title: 'Tapioca com Coco',
+    cost: Cost.Cheap,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://www.receitasnestle.com.br/sites/default/files/styles/recipe_detail_desktop/public/srh_recipes/9a945da4348e6eeb4550014eb1183adc.webp?itok=E5Rxz25W',
+    duration: 20,
+    ingredients: [
+      '1 cup of tapioca pearls',
+      'Shredded coconut',
+      'Condensed milk or coconut milk (for topping)'
+    ],
+    steps: [
+      'In a non-stick pan, heat tapioca pearls over medium heat until they form a cohesive mass.',
+      'Spread the tapioca on a plate to cool slightly.',
+      'Sprinkle shredded coconut over the tapioca.',
+      'Drizzle condensed milk or coconut milk on top.',
+      'Fold and serve this simple and delightful tapioca treat!'
+    ],
+    isGlutenFree: true,
+    isVegan: false,
+    isVegetarian: true,
+    isLactoseFree: false,
+  ),
+  Meal(
+    id: 'm15',
+    categories: ['c11'],
+    title: 'Cuscuz Nordestino',
+    cost: Cost.Fair,
+    complexity: Complexity.Simple,
+    imageUrl:
+        'https://assets.unileversolutions.com/recipes-v2/53028.jpg?im=Resize,height=530;Crop,size=(540,530),gravity=Center',
+    duration: 30,
+    ingredients: [
+      '2 cups of cornmeal',
+      '2 cups of water',
+      '1 teaspoon of salt',
+      '1/2 cup of grated coconut',
+      'Sliced banana or butter (optional)'
+    ],
+    steps: [
+      'Mix cornmeal, water, and salt in a bowl to form a thick batter.',
+      'Add grated coconut to the batter and stir well.',
+      'Pour the mixture into a cuscuz steamer or a heatproof dish.',
+      'Steam until the cuscuz is firm and cooked through.',
+      'Serve with sliced banana or butter if desired.'
+    ],
+    isGlutenFree: true,
+    isVegan: true,
+    isVegetarian: true,
+    isLactoseFree: true,
+  ),
 ];
