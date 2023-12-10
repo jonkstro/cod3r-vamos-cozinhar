@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:vamos_cozinhar/screens/categories_meals_screen.dart';
 import 'package:vamos_cozinhar/screens/categories_screen.dart';
+import 'package:vamos_cozinhar/screens/meal_detail_screen.dart';
+import 'package:vamos_cozinhar/screens/unknown_screen.dart';
 import 'package:vamos_cozinhar/utils/app_routes.dart';
 
 void main() {
@@ -42,6 +44,16 @@ class MyApp extends StatelessWidget {
       routes: {
         // Não precisa adicionar o HOME aqui, senão dá erro de redundancia
         AppRoutes.CATEGORIES_MEALS: (context) => const CategoriesMealsScreen(),
+        AppRoutes.MEAL_DETAIL: (context) => const MealDetailScreen(),
+      },
+
+      /// Se não achar nenhuma rota vai abrir a "Página 404" igual na WEB
+      onUnknownRoute: (settings) {
+        return MaterialPageRoute(
+          builder: (_) {
+            return const UnknownScreen();
+          },
+        );
       },
     );
   }

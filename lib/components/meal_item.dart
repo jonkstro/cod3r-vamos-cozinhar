@@ -1,20 +1,26 @@
 import 'package:flutter/material.dart';
 import 'package:vamos_cozinhar/models/meal.dart';
+import 'package:vamos_cozinhar/utils/app_routes.dart';
 
 class MealItem extends StatelessWidget {
   final Meal meal;
   const MealItem({super.key, required this.meal});
 
   /// Esse método vai ser responsável por mostrar os detalhes do prato ao ser clicado
-  void _selectMeal() {
-    return null;
+  void _selectMeal(BuildContext context) {
+    Navigator.of(context).pushNamed(
+      AppRoutes.MEAL_DETAIL,
+
+      /// Vamos passar no argumento a refeição, pra não precisar passar no construtor
+      arguments: meal,
+    );
   }
 
   @override
   Widget build(BuildContext context) {
     return InkWell(
       onTap: () {
-        _selectMeal();
+        _selectMeal(context);
       },
       child: Card(
           shape: RoundedRectangleBorder(
@@ -43,7 +49,7 @@ class MealItem extends StatelessWidget {
                   ),
                   Positioned(
                     bottom: 0,
-                    right: 0,
+                    left: 0,
                     child: Container(
                       width: 300,
                       color: Colors.black54,
