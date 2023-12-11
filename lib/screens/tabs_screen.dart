@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:vamos_cozinhar/components/main_drawer.dart';
 import 'package:vamos_cozinhar/screens/categories_screen.dart';
 import 'package:vamos_cozinhar/screens/favorite_screen.dart';
+
+import '../models/meal.dart';
 // import 'package:vamos_cozinhar/screens/categories_screen.dart';
 // import 'package:vamos_cozinhar/screens/favorite_screen.dart';
 
 class TabScreen extends StatefulWidget {
-  const TabScreen({super.key});
+  /// Enviamos aqui pra TabScreen as favoritas pra ela mandar pra FavoriteScreen
+  final List<Meal> favoriteMeals;
+  const TabScreen({super.key, required this.favoriteMeals});
 
   @override
   State<TabScreen> createState() => _TabScreenState();
@@ -16,12 +21,20 @@ class _TabScreenState extends State<TabScreen> {
   int _selectedScreenIndex = 0;
 
   /// Ao clicar no navigationbar ele vai alterar entre os indices dessa lista
-  final List<Map<String, Object>> _screens = [
-    {'title': 'Lista de Categorias', 'screen': const CategoriesScreen()},
-    {'title': 'Meus Favoritos', 'screen': const FavoriteScreen()},
-    // const CategoriesScreen(),
-    // const FavoriteScreen(),
-  ];
+  late List<Map<String, Object>> _screens;
+
+  /// Botamos no initstate pq tá vindo lá de cima no widget
+  @override
+  void initState() {
+    super.initState();
+    _screens = [
+      {'title': 'Lista de Categorias', 'screen': const CategoriesScreen()},
+      {
+        'title': 'Meus Favoritos',
+        'screen': FavoriteScreen(favoriteMeals: widget.favoriteMeals)
+      },
+    ];
+  }
 
   /// Método que vai alterar a tela mudando o valor da variavel _selectedScreenIndex
   _selectScreen(int index) {
@@ -61,6 +74,8 @@ class _TabScreenState extends State<TabScreen> {
       //     FavoriteScreen(),
       //   ],
       // ),
+      drawer: MainDrawer(),
+
       /// Vai ter que castear pra não dar erros
       body: _screens[_selectedScreenIndex]['screen'] as Widget,
       bottomNavigationBar: BottomNavigationBar(

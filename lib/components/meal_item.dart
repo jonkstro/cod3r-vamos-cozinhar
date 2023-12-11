@@ -8,12 +8,14 @@ class MealItem extends StatelessWidget {
 
   /// Esse método vai ser responsável por mostrar os detalhes do prato ao ser clicado
   void _selectMeal(BuildContext context) {
-    Navigator.of(context).pushNamed(
-      AppRoutes.MEAL_DETAIL,
+    Navigator.of(context)
+        .pushNamed(
+          AppRoutes.MEAL_DETAIL,
 
-      /// Vamos passar no argumento a refeição, pra não precisar passar no construtor
-      arguments: meal,
-    );
+          /// Vamos passar no argumento a refeição, pra não precisar passar no construtor
+          arguments: meal,
+        )
+        .then((value) {});
   }
 
   @override
